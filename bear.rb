@@ -12,8 +12,9 @@ def stomach()
   return @stomach.length
 end
 
-def take_fish(fish)
+def take_fish(fish, river)
   @stomach << fish
+  river.lose_fish(fish)
 end
 
 
