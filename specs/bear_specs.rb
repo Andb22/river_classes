@@ -11,16 +11,21 @@ class BearTest < MiniTest::Test
     @fish = Fish.new("Zippy")
   end
 
-  def test_can_create_bear
+  def test_can_create_bear()
     assert_equal(Bear, @bear.class())
   end
 
-  def test_return_bear_name
-    assert_equal("Gentle Ben", @bear.name)
+  def test_return_bear_name()
+    assert_equal("Gentle Ben", @bear.name())
   end
 
-  def test_can_take_fish
-    assert_equal("Zippy", @fish.name)
+  def test_empty_stomach()
+    assert_equal(0, @bear.stomach())
+  end
+
+  def test_can_take_fish()
+    @bear.take_fish(@fish)
+    assert_equal(1, @bear.stomach())
   end
 
 end
