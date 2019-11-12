@@ -12,6 +12,9 @@ def test_can_create_fish
   assert_equal(Fish, @fish.class())
 end
 
+def test_return_fish_name
+  assert_equal("George", @fish.name)
+end
 
 
 end
