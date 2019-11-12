@@ -17,6 +17,8 @@ def take_fish(fish, river)
   river.lose_fish(fish)
 end
 
-
+def roar
+  return "ROAR"
+end
 
 end
